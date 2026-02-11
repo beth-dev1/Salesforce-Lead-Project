@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Type_Virtual</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+ISPICKVAL( Event_Type__c, &apos;Virtual&apos;),
+NOT( ISBLANK( Location__c ) )
+)</errorConditionFormula>
+    <errorDisplayField>Location__c</errorDisplayField>
+    <errorMessage>For Virtual events, please leave the Location field empty.</errorMessage>
+</ValidationRule>
